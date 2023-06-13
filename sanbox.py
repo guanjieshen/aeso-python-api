@@ -24,6 +24,12 @@ class aeso:
         self.api_key = api_key
         self.header = {"X-API-Key": "{}".format(self.api_key)}
 
+    def __try_float(self, v):
+        try:
+            return float(v)
+        except Exception:
+            return None
+
     def __generate_api_uri(self, api_endpoint: str) -> str:
         return f"{self.api_root_uri}{api_endpoint}"
 
@@ -34,7 +40,7 @@ class aeso:
     def __parse_pool_price(self, response: str) -> List[PoolPrice]:
         date_format = "%Y-%m-%d %H:%M"
         list_of_pool_prices: List[PoolPrice] = []
-        for item in pool_price_data:
+        for item in response:
             begin_datetime_utc = datetime.strptime(
                 item["begin_datetime_utc"], date_format
             )
@@ -48,9 +54,9 @@ class aeso:
             pool_price_object: PoolPrice = PoolPrice(
                 begin_datetime_utc=begin_datetime_utc,
                 begin_datetime_mpt=begin_datetime_mpt,
-                pool_price=float(pool_price),
-                forecast_pool_price=float(forecast_pool_price),
-                rolling_30day_avg=float(rolling_30day_avg),
+                pool_price=self.__try_float(pool_price),
+                forecast_pool_price=self.__try_float(forecast_pool_price),
+                rolling_30day_avg=self.__try_float(rolling_30day_avg),
             )
             list_of_pool_prices.append(pool_price_object)
         return list_of_pool_prices
@@ -65,7 +71,6 @@ class aeso:
             pool_price_resp.json()["return"]["Pool Price Report"]
         )
 
-
 # COMMAND ----------
 
 # MAGIC %md Testing Class
@@ -74,8 +79,7 @@ class aeso:
 
 aeso_api_key = 'eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJvaXNrM2EiLCJpYXQiOjE2Nzc2OTMyOTh9.wojWs2r9ecH88GbPpy34FShwhkjXPJXBAijY8S3rNAw'
 aeso_instance = aeso(aeso_api_key)
-resp = aeso_instance.get_pool_price_report(start_date="2023-05-30",end_date= "2023-05-31")
-print(resp[0].forecast_pool_price)
+resp= aeso_instance.get_pool_price_report(start_date="2023-06-12",end_date= "2023-06-13")
 
 # COMMAND ----------
 
