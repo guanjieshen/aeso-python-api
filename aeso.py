@@ -1,10 +1,11 @@
+from datetime import datetime
 from constants import AESO_ROOT_URL
 from typing import List
 from data_classes import PoolPrice
 import requests
 
 
-class ets:
+class AESOAPI:
     def __init__(self, api_key):
         self.api_root_uri = AESO_ROOT_URL
         self.api_key = api_key
