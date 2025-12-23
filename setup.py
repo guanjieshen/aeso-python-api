@@ -8,7 +8,7 @@ with open("requirements.txt", "r", encoding="utf-8") as fh:
     requirements = [line.strip() for line in fh if line.strip() and not line.startswith("#")]
 
 setup(
-    name="aeso-api",
+    name="aeso-python-api",
     version="0.2.0",
     author="Guanjie Shen",
     description="A Python wrapper for the Alberta Electric System Operator (AESO) API",

@@ -10,7 +10,7 @@ A Python wrapper for the [Alberta Electric System Operator (AESO) API](https://a
 ## Installation
 
 ```bash
-pip install -r requirements.txt
+pip install aeso
 ```
 
 ## Getting Started
