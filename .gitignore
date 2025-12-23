@@ -7,6 +7,8 @@ config.py
 example.py
 example_new_interface.py
 test_new_api.py
+# Developer documentation (keep in repo but not for users)
+PUBLISHING.md
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
