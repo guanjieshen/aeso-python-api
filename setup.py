@@ -1,26 +1,41 @@
-#!/usr/bin/env python
-import os
-import re
-
+"""Setup configuration for AESO Python API"""
 from setuptools import setup, find_packages
 
+with open("README.md", "r", encoding="utf-8") as fh:
+    long_description = fh.read()
+
+with open("requirements.txt", "r", encoding="utf-8") as fh:
+    requirements = [line.strip() for line in fh if line.strip() and not line.startswith("#")]
 
 setup(
-    name="aeso-python-api",
-    version="0.0.1",
-    description="A Python API for Aeso Data",
-    long_description=open("README.md").read(),
-    long_description_content_type="text/markdown",
+    name="aeso",
+    version="0.2.0",
     author="Guanjie Shen",
+    author_email="guanjie.shen@gmail.com",
+    description="A Python wrapper for the Alberta Electric System Operator (AESO) API",
+    long_description=long_description,
+    long_description_content_type="text/markdown",
     url="https://github.com/guanjieshen/aeso-python-api",
-    packages=find_packages(exclude=["tests*"]),
-    install_requires=["requests>=2.5.0,<3.0.0"],
-    license="MIT License",
+    packages=find_packages(exclude=["tests", "tests.*"]),
     classifiers=[
-        "Development Status :: 3 - Alpha",
+        "Development Status :: 4 - Beta",
         "Intended Audience :: Developers",
-        "Natural Language :: English",
+        "Topic :: Software Development :: Libraries :: Python Modules",
         "License :: OSI Approved :: MIT License",
+        "Programming Language :: Python :: 3",
+        "Programming Language :: Python :: 3.6",
+        "Programming Language :: Python :: 3.7",
         "Programming Language :: Python :: 3.8",
+        "Programming Language :: Python :: 3.9",
+        "Programming Language :: Python :: 3.10",
+        "Programming Language :: Python :: 3.11",
     ],
+    python_requires=">=3.6",
+    install_requires=requirements,
+    keywords="aeso alberta electricity api pool price energy market",
+    project_urls={
+        "Bug Reports": "https://github.com/guanjieshen/aeso-python-api/issues",
+        "Source": "https://github.com/guanjieshen/aeso-python-api",
+        "Documentation": "https://github.com/guanjieshen/aeso-python-api#readme",
+    },
 )

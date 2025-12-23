@@ -1,12 +1,9 @@
-from dataclasses import dataclass
-from datetime import datetime
-from typing import List
+"""
+Data classes (legacy module for backward compatibility)
 
+Note: This module is maintained for backward compatibility.
+New code should import from models.pool_price instead.
+"""
+from models.pool_price import PoolPrice
 
-@dataclass
-class PoolPrice:
-    begin_datetime_utc: datetime
-    begin_datetime_mpt: datetime
-    pool_price: float
-    forecast_pool_price: float
-    rolling_30day_avg: float
+__all__ = ["PoolPrice"]

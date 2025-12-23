@@ -1,7 +1,12 @@
-# Testing
-example.py
 # VSCode
 .vscode
+# API Keys and sensitive data
+api_key.txt
+config.py
+.api_key
+example.py
+example_new_interface.py
+test_new_api.py
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]

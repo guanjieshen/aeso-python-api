@@ -1,1 +1,1 @@
-AESO_ROOT_URL = "https://api.aeso.ca/"
+AESO_ROOT_URL = "https://apimgw.aeso.ca/public/poolprice-api/"
