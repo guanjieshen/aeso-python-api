@@ -11,7 +11,6 @@ setup(
     name="aeso",
     version="0.2.0",
     author="Guanjie Shen",
-    author_email="guanjie.shen@gmail.com",
     description="A Python wrapper for the Alberta Electric System Operator (AESO) API",
     long_description=long_description,
     long_description_content_type="text/markdown",
