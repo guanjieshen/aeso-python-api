@@ -1,16 +1,16 @@
 # AESO Python API
 
-[![image](https://img.shields.io/pypi/v/cloudprice.svg)](https://pypi.org/project/cloudprice/)
-[![image](https://pepy.tech/badge/cloudprice)](https://pepy.tech/project/geodemo)
-[![image](https://github.com/guanjieshen/cloud-compute-pricing/workflows/build/badge.svg)](https://github.com/giswqs/geodemo/actions?query=workflow%3Abuild)
-[![image](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![PyPI version](https://img.shields.io/pypi/v/aeso-python-api.svg)](https://pypi.org/project/aeso-python-api/)
+[![Downloads](https://pepy.tech/badge/aeso-python-api)](https://pepy.tech/project/aeso-python-api)
+[![Build Status](https://github.com/guanjieshen/aeso-python-api/workflows/build/badge.svg)](https://github.com/guanjieshen/aeso-python-api/actions?query=workflow%3Abuild)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 A Python wrapper for the [Alberta Electric System Operator (AESO) API](https://api.aeso.ca/web/api). Easily access pool price reports and electricity market data.
 
 ## Installation
 
 ```bash
-pip install aeso
+pip install aeso-python-api
 ```
 
 ## Getting Started
