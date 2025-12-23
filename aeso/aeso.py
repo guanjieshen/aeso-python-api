@@ -1,8 +1,8 @@
 """Main AESO API client"""
 from typing import List
-from constants import AESO_ROOT_URL
-from resources.pool_price import PoolPriceResource
-from models.pool_price import PoolPrice
+from aeso.constants import AESO_ROOT_URL
+from aeso.resources.pool_price import PoolPriceResource
+from aeso.models.pool_price import PoolPrice
 
 
 class AESOAPI:

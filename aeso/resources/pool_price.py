@@ -1,8 +1,8 @@
 """Pool Price resource"""
 from datetime import datetime
 from typing import List, Optional
-from resources.base import BaseResource
-from models.pool_price import PoolPrice
+from aeso.resources.base import BaseResource
+from aeso.models.pool_price import PoolPrice
 
 
 class PoolPriceResource(BaseResource):

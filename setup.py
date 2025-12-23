@@ -9,7 +9,7 @@ with open("requirements.txt", "r", encoding="utf-8") as fh:
 
 setup(
     name="aeso-python-api",
-    version="0.2.0",
+    version="0.2.1",
     author="Guanjie Shen",
     description="A Python wrapper for the Alberta Electric System Operator (AESO) API",
     long_description=long_description,
